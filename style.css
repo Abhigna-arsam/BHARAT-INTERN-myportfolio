@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Dark gray */
+    color: #fff; /* White text */
+    padding: 20px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #151218;
+  --primary-color-dark: #ae9fbd;
+  --secondary-color: #b99851;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+
+
+
+
+.cv-download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;  
+    border-radius: 5px;
+    font-weight: bold;  
+    transition: background-color 0.3s;
+}
+
+.cv-download-btn:hover {
+    background-color: #555; 
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+
+  #about {
+    position: relative;
+  }
+  
+  .about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .about-details-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .about-containers,
+  .about-details-container {
+    display: flex;
+  }
+  
+  .about-pic {
+    border-radius: 2rem;
+  }
+  
+
+  .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+  }
+
+
+  
+  .skills{
+      margin: auto;
+      width: 1100px 0;
+  
+  }
+  .skills h1{
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+  }
+  
+  .skills-section {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+  }
+  
+  .skills-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  .skills-section ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  .skills-section li {
+      margin: 10px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+  }
+  .content{
+      display: flex;
+      align-items: center;
+  }
+  .left{
+      width: 50%;
+  }
+  .left h1{
+      text-align: left;
+      font-size: 30px;
+  }
+  .left p{
+      font-size: 18px;
+  }
+  .left a{
+      background-color: crimson;
+      color: white;
+      padding: 8px 16px;
+      border: 2px solid crimson;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+  }
+  .left a.hover{
+      background-color: transparent;
+      color: crimson;
+  
+  }
+  
+  .right{
+      flex: 1;
+      margin-left: 30px;
+  
+  }
+  
+  .right .line{
+      margin-bottom: 15px;
+  }
+  .right .info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .right .info span{
+      font-weight: 500;
+      font-size: 18px;
+  }
+  
+  .right .bars{
+      background-color: lightgrey;
+      height: 5px;
+      width: 100%;
+      position: relative;
+  }
+  .right .bars::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      background-color: crimson;
+  
+  }
+  .right .html::before{
+      width: 90%;
+  }
+  .right .css::before{
+      width: 70%;
+  }
+  .right .js::before{
+      width: 50%;
+  }
+  
+
+.projects {
+    padding: 50px 0;
+    background-color: #f4f4f4;  /* Light grey background */
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.project-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block;
+    width: calc(33% - 40px); /* Three cards per row with some margin */
+    box-sizing: border-box;
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.project-card img {
+    max-width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 1em;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* spacing between the links */
+}
+
+.footer-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #FFD700; /* gold color on hover */
+}
